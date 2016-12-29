@@ -8,7 +8,6 @@ describe 'Stub app' do
     'POST charges' => { route: '/v1/charges', method: :post },
     'GET charges/:charge_id' => { route: '/v1/charges/1', method: :get },
     'POST charges/:charge_id' => { route: '/v1/charges/1', method: :post },
-    'POST refunds' => { route: '/v1/refunds', method: :post },
     'POST charges/:charge_id/refund' =>
     { route: '/v1/charges/1/refund', method: :post },
     'POST charges/:charge_id/capture' =>
@@ -33,6 +32,17 @@ describe 'Stub app' do
        { route: '/v1/customers/1/sources/1', method: :delete },
     'GET customers/:customer_id/sources' =>
        { route: '/v1/customers/1/sources', method: :get },
+    # Subscriptions
+    'POST subscriptions' =>
+       { route: '/v1/subscriptions', method: :post },
+    'GET subscriptions/:subscription_id' =>
+       { route: '/v1/subscriptions/1', method: :get },
+    'POST subscriptions/:subscription_id' =>
+       { route: '/v1/subscriptions/1', method: :post },
+    'DELETE subscriptions/:subscription_id' =>
+       { route: '/v1/subscriptions/1', method: :delete },
+    'GET subscriptions' =>
+       { route: '/v1/subscriptions', method: :get },
     # Subscriptions
     'POST customers/:customer_id/subscriptions' =>
        { route: '/v1/customers/1/subscriptions', method: :post },
